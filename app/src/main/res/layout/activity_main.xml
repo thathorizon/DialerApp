@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/topDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvPhoneNumber" />
+
+    <TextView
+        android:id="@+id/tvPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingHorizontal="48dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@id/bottomDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="+0 000 000-00-00" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_backspace"
+        app:layout_constraintTop_toTopOf="@id/tvPhoneNumber"
+        app:layout_constraintBottom_toBottomOf="@id/tvPhoneNumber"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/bottomDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/divider_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnOne" />
+
+    <Button
+        android:id="@+id/btnOne"
+        style="@style/NumberButtonStyle"
+        android:text="1"
+        app:layout_constraintEnd_toStartOf="@id/btnTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnFour"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnTwo"
+        style="@style/NumberButtonStyle"
+        android:text="2"
+        app:layout_constraintEnd_toStartOf="@id/btnThree"
+        app:layout_constraintStart_toEndOf="@id/btnOne"
+        app:layout_constraintBottom_toTopOf="@id/btnFive"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnThree"
+        style="@style/NumberButtonStyle"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnTwo"
+        app:layout_constraintBottom_toTopOf="@id/btnSix"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnFour"
+        style="@style/NumberButtonStyle"
+        android:text="4"
+        app:layout_constraintEnd_toStartOf="@id/btnFive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnSeven"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnFive"
+        style="@style/NumberButtonStyle"
+        android:text="5"
+        app:layout_constraintEnd_toStartOf="@id/btnFour"
+        app:layout_constraintStart_toEndOf="@id/btnSix"
+        app:layout_constraintBottom_toTopOf="@id/btnEight"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnSix"
+        style="@style/NumberButtonStyle"
+        android:text="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnFive"
+        app:layout_constraintBottom_toTopOf="@id/btnNine"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnSeven"
+        style="@style/NumberButtonStyle"
+        android:text="7"
+        app:layout_constraintEnd_toStartOf="@id/btnEight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnStarSign"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnEight"
+        style="@style/NumberButtonStyle"
+        android:text="8"
+        app:layout_constraintEnd_toStartOf="@id/btnNine"
+        app:layout_constraintStart_toEndOf="@id/btnSeven"
+        app:layout_constraintBottom_toTopOf="@id/btnZero"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnNine"
+        style="@style/NumberButtonStyle"
+        android:text="9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnEight"
+        app:layout_constraintBottom_toTopOf="@id/btnHashSign"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnStarSign"
+        style="@style/NumberButtonStyle"
+        android:text="*"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toStartOf="@id/btnZero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnCall"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnZero"
+        style="@style/NumberButtonStyle"
+        android:text="0"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toStartOf="@id/btnHashSign"
+        app:layout_constraintStart_toEndOf="@id/btnStarSign"
+        app:layout_constraintBottom_toTopOf="@id/btnCall"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnHashSign"
+        style="@style/NumberButtonStyle"
+        android:text="#"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnZero"
+        app:layout_constraintBottom_toTopOf="@id/btnCall"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/btnCall"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_button_call"
+        android:src="@drawable/ic_call"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
